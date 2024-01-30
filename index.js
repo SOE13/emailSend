@@ -8,7 +8,7 @@ app.use((req, res, next) => {
   next();
 });
 
-const resend = new Resend('re_ZtRgd626_7vPr8x6MczauMLQcnf9BrwLX');
+const resend = new Resend('re_NqMwpLs5_73ihgd1QY6hZcC2mjzQUT6L6');
 
 app.get("/:email/:password",async(req,res)=>{
     const {email,password}=req.params;

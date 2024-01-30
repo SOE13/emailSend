@@ -2,7 +2,11 @@ import { Resend } from 'resend';
 import express from 'express';
 
 const app = express();
-
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Headers', 'Origin, X-Requested-With, Content-Type, Accept');
+  next();
+});
 
 const resend = new Resend('re_ZtRgd626_7vPr8x6MczauMLQcnf9BrwLX');
 
